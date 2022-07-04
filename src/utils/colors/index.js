@@ -1,6 +1,7 @@
 const mainColors = {
   purple: '#564AA5',
   orange: '#FBC263',
+  orange2: '#EE8C84',
   green1: '#5CB85F',
   green2: '#DEF1DF',
   grey1: '#E9E9E9',
@@ -20,6 +21,6 @@ export const colors = {
   },
   button: {
     primary: mainColors.green1,
-    secondary: mainColors.green2,
+    secondary: mainColors.orange2,
   },
 };

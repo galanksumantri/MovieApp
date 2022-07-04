@@ -8,6 +8,7 @@ import NetInfo from '@react-native-community/netinfo';
 import {
   Card, DetailFilm, IconButton, ListGenre, Loading, NoInternet,
 } from '../../components';
+import { colors } from '../../utils';
 
 function Detail({ route, navigation }) {
   const [isLoading, setLoading] = useState(true);
@@ -78,7 +79,7 @@ function Detail({ route, navigation }) {
         <Loading />
       ) : (
         <View style={styles.page}>
-          <StatusBar barStyle="light-content" backgroundColor="red" />
+          <StatusBar barStyle="light-content" backgroundColor={colors.primary} />
           <ScrollView
             refreshControl={<RefreshControl refreshing={refreshing} onRefresh={onRefresh} />}
           >
@@ -89,7 +90,7 @@ function Detail({ route, navigation }) {
             >
               <View style={styles.iconButton}>
                 <View style={{ flex: 3 }}>
-                  <IconButton type="Back" onPress={() => navigation.goBack()} />
+                  {/* <IconButton type="Back" onPress={() => navigation.goBack()} /> */}
                 </View>
                 <View
                   style={{
@@ -99,10 +100,10 @@ function Detail({ route, navigation }) {
                   }}
                 >
                   <View style={{ paddingLeft: 40 }}>
-                    <IconButton type="Like" />
+                    {/* <IconButton type="Like" /> */}
                   </View>
                   <View>
-                    <IconButton type="Share" onPress={myCustomShare} />
+                    {/* <IconButton type="Share" onPress={myCustomShare} /> */}
                   </View>
                 </View>
               </View>
@@ -158,7 +159,7 @@ const windowHeight = Dimensions.get('window').height;
 const styles = StyleSheet.create({
   page: {
     flex: 1,
-    backgroundColor: 'red',
+    backgroundColor: colors.primary,
   },
   header: {
     width: windowWidth,
@@ -173,20 +174,20 @@ const styles = StyleSheet.create({
   },
   label: {
     marginTop: 18,
-    color: 'green',
+    color: colors.secondary,
     fontSize: 20,
     marginBottom: 10,
   },
 
   genre: {
-    color: 'green',
+    color: colors.secondary,
     fontSize: 14,
     marginRight: 10,
   },
 
   synopsis: {
     fontSize: 14,
-    color: 'green',
+    color: colors.secondary,
     textAlign: 'justify',
   },
 
@@ -201,15 +202,10 @@ const styles = StyleSheet.create({
     marginHorizontal: 13,
     marginVertical: 13,
   },
-  genre: {
-    fontSize: 14,
-    color: 'green',
-  },
   cardActor: {
     height: windowHeight * 0.29,
     width: windowWidth * 0.29,
   },
-
   image: {
     height: '90%',
     width: null,
@@ -217,7 +213,7 @@ const styles = StyleSheet.create({
   },
   name: {
     fontSize: 12,
-    color: 'green',
+    color: colors.button.secondary,
     textAlign: 'center',
     paddingTop: 5,
   },

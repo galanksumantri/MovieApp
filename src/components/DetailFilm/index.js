@@ -3,6 +3,7 @@ import {
   Dimensions, Image, StyleSheet, Text, View,
 } from 'react-native';
 import { Rating } from 'react-native-elements';
+import { fonts, colors } from '../../utils';
 
 function DetailFilm({
   title, tagline, status, date, voteAverage, runtime, source,
@@ -59,7 +60,7 @@ const styles = StyleSheet.create({
   card: {
     width: windowWidth * 0.95,
     height: windowHeight * 0.3,
-    backgroundColor: colors.background.icon.opacity,
+    backgroundColor: colors.background2,
     alignSelf: 'center',
     marginTop: -windowHeight * 0.16,
     borderRadius: 4,
@@ -87,7 +88,7 @@ const styles = StyleSheet.create({
 
   description: {
     fontSize: 14,
-    color: colors.text.description,
+    color: colors.text.secondary,
     fontFamily: fonts.primary[600],
   },
 
@@ -102,7 +103,7 @@ const styles = StyleSheet.create({
   },
 
   ratingNumber: {
-    color: colors.text.rating,
+    color: colors.text.primary,
     fontFamily: fonts.primary[400],
     fontSize: 14,
     marginTop: 5,
