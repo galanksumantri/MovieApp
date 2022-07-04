@@ -1,8 +1,7 @@
-import {
-  StyleSheet, Text, View, Image, StatusBar, Dimensions,
-} from 'react-native';
+import {StyleSheet, Text, View, Image, StatusBar} from 'react-native';
 import React, { useEffect } from 'react';
-import { Logo, Logo1 } from '../../asset';
+import { Logo1 } from '../../asset';
+import { colors } from '../../utils';
 
 function Splash({ navigation }) {
   useEffect(() => {
@@ -13,7 +12,7 @@ function Splash({ navigation }) {
 
   return (
     <View style={styles.page}>
-      <StatusBar barStyle="light-content" backgroundColor="#564AA5" />
+      <StatusBar barStyle="light-content" backgroundColor={colors.primary} />
       <Image style={styles.image} source={Logo1} />
       <Text style={styles.title}>Gold Movie</Text>
       <Text style={styles.nickname}>GALANG SUMANTRI</Text>
@@ -25,21 +24,19 @@ export default Splash;
 
 const styles = StyleSheet.create({
   page: {
-    backgroundColor: '#564AA5',
+    backgroundColor: colors.primary,
     flex: 1,
     alignItems: 'center',
     justifyContent: 'center',
   },
   title: {
     fontSize: 15,
-    color: '#FBC263',
+    color: colors.secondary,
   },
-
   image: {
     height: '17.5%',
     width: '30%',
   },
-
   nickname: {
     fontSize: 10,
     color: '#000',

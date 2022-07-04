@@ -1,11 +1,10 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
-import {
-  Dimensions, Image, StyleSheet, Text, View,
-} from 'react-native';
+import {Dimensions, Image, StyleSheet, Text, View} from 'react-native';
 import Button from '../Button';
 import ListGenre from '../ListGenre';
 import Loading from '../Loading';
+import {colors} from '../../utils'
 
 function ListFilm({
   onPress, title, date, rating, genre, source,
@@ -80,22 +79,22 @@ const styles = StyleSheet.create({
   description: { flex: 4 },
   titleFilm: {
     fontSize: 16,
-    color: '#FBC263',
+    color: colors.secondary,
     paddingBottom: 4,
   },
   dateRelease: {
-    color: '#FBC263',
+    color: colors.secondary,
     fontSize: 12,
     paddingBottom: 4,
   },
   rating: {
-    color: '#FBC263',
+    color: colors.secondary,
     fontSize: 12,
     paddingBottom: 4,
   },
 
   genre: {
-    color: 'purple',
+    color: colors.primary,
     fontSize: 12,
     paddingBottom: 4,
   },

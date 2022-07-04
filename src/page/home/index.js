@@ -1,12 +1,9 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
-import {
-  Dimensions, Image, ScrollView, StatusBar, StyleSheet, Text, View, RefreshControl,
-} from 'react-native';
+import {Dimensions, Image, ScrollView, StatusBar, StyleSheet, Text, View, RefreshControl} from 'react-native';
 import NetInfo from '@react-native-community/netinfo';
-import {
-  Card, ListFilm, Loading, NoInternet,
-} from '../../components';
+import {Card, ListFilm, Loading, NoInternet} from '../../components';
+import { colors } from '../../utils';
 
 function Home({ navigation }) {
   const [isLoading, setLoading] = useState(true);
@@ -70,7 +67,7 @@ function Home({ navigation }) {
         <Loading />
       ) : (
         <View View style={styles.page}>
-          <StatusBar barStyle="light-content" backgroundColor="#72808A" />
+          <StatusBar barStyle="light-content" backgroundColor={colors.primary} />
           <ScrollView
             refreshControl={<RefreshControl refreshing={refreshing} onRefresh={onRefresh} />}
           >
@@ -115,21 +112,18 @@ const windowHeight = Dimensions.get('window').height;
 const styles = StyleSheet.create({
   page: {
     flex: 1,
-    backgroundColor: '#564AA5',
+    backgroundColor: colors.primary,
     paddingVertical: 13,
     paddingHorizontal: 13,
   },
-
   label: {
-    color: '#FBC263',
+    color: colors.secondary,
     fontSize: 20,
   },
-
   recommended: {
     flexDirection: 'row',
     marginBottom: 16,
   },
-
   wrapperSections: {
     justifyContent: 'space-between',
   },

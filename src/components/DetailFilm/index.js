@@ -1,7 +1,5 @@
 import React from 'react';
-import {
-  Dimensions, Image, StyleSheet, Text, View,
-} from 'react-native';
+import {Dimensions, Image, StyleSheet, Text, View} from 'react-native';
 import { Rating } from 'react-native-elements';
 import { fonts, colors } from '../../utils';
 
@@ -68,40 +66,34 @@ const styles = StyleSheet.create({
     paddingHorizontal: 8,
     flexDirection: 'row',
   },
-
   image: {
     height: '100%',
     width: null,
     flex: 2,
     marginRight: 10,
   },
-
   detailFilm: {
     flex: 4,
   },
-
   title: {
     fontSize: 18,
     color: colors.text.primary,
     fontFamily: fonts.primary[600],
   },
-
   description: {
     fontSize: 14,
-    color: colors.text.secondary,
+    color: colors.primary,
+    fontWeight: 'bold',
     fontFamily: fonts.primary[600],
   },
-
   contentDescription: {
     fontSize: 14,
     color: colors.text.primary,
     fontFamily: fonts.primary[400],
   },
-
   rating: {
     alignSelf: 'flex-start',
   },
-
   ratingNumber: {
     color: colors.text.primary,
     fontFamily: fonts.primary[400],

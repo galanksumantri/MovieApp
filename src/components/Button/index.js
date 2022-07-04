@@ -2,6 +2,7 @@ import {
   StyleSheet, Text, TouchableOpacity, Dimensions,
 } from 'react-native';
 import React from 'react';
+import { colors } from '../../utils';
 
 function Button({ onPress, disabled, title }) {
   return (
@@ -26,7 +27,7 @@ const styles = StyleSheet.create({
     borderRadius: 10,
   },
   text: {
-    color: '#FBC263',
+    color: colors.secondary,
     fontSize: 14,
   },
 });

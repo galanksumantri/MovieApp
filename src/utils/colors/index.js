@@ -5,7 +5,7 @@ const mainColors = {
   green1: '#5CB85F',
   green2: '#DEF1DF',
   grey1: '#E9E9E9',
-  grey2: '#D3D9FD',
+  grey2: '#72808A',
 };
 
 export const colors = {

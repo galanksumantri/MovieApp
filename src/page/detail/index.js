@@ -1,14 +1,10 @@
 import axios from 'axios';
-import React, { useEffect, useState } from 'react';
-import {
-  Dimensions, Image, ImageBackground, ScrollView, StatusBar, StyleSheet, Text, View, RefreshControl,
-} from 'react-native';
+import React, {useEffect, useState} from 'react';
+import {Dimensions, Image, ImageBackground, ScrollView, StatusBar, StyleSheet, Text, View, RefreshControl } from 'react-native';
 import Share from 'react-native-share';
 import NetInfo from '@react-native-community/netinfo';
-import {
-  Card, DetailFilm, IconButton, ListGenre, Loading, NoInternet,
-} from '../../components';
-import { colors } from '../../utils';
+import {Card, DetailFilm, IconButton, ListGenre, Loading, NoInternet} from '../../components';
+import {colors} from '../../utils';
 
 function Detail({ route, navigation }) {
   const [isLoading, setLoading] = useState(true);
@@ -35,7 +31,6 @@ function Detail({ route, navigation }) {
     const shareOptions = {
       message: `Go to homepage for film ${data.original_title} ${data.homepage}`,
     };
-
     try {
       await Share.open(shareOptions);
     } catch (error) {
@@ -59,7 +54,6 @@ function Detail({ route, navigation }) {
       const offline = !(state.isConnected && state.isInternetReachable);
       setOfflineStatus(offline);
     });
-
     getData(id);
     return () => {
       isMounted = false;
@@ -90,7 +84,7 @@ function Detail({ route, navigation }) {
             >
               <View style={styles.iconButton}>
                 <View style={{ flex: 3 }}>
-                  {/* <IconButton type="Back" onPress={() => navigation.goBack()} /> */}
+                  <IconButton type="Back" onPress={() => navigation.goBack()} />
                 </View>
                 <View
                   style={{
@@ -99,11 +93,11 @@ function Detail({ route, navigation }) {
                     justifyContent: 'space-between',
                   }}
                 >
-                  <View style={{ paddingLeft: 40 }}>
-                    {/* <IconButton type="Like" /> */}
+                  <View style={{ paddingLeft: 55 }}>
+                    <IconButton type="Like" />
                   </View>
                   <View>
-                    {/* <IconButton type="Share" onPress={myCustomShare} /> */}
+                    <IconButton type="Share" onPress={myCustomShare} />
                   </View>
                 </View>
               </View>
@@ -178,19 +172,16 @@ const styles = StyleSheet.create({
     fontSize: 20,
     marginBottom: 10,
   },
-
   genre: {
     color: colors.secondary,
     fontSize: 14,
     marginRight: 10,
   },
-
   synopsis: {
     fontSize: 14,
     color: colors.secondary,
     textAlign: 'justify',
   },
-
   actorSection: {
     flexDirection: 'row',
     justifyContent: 'space-between',

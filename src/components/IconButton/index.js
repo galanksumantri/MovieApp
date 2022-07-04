@@ -1,6 +1,7 @@
 import React from 'react';
 import { StyleSheet, TouchableOpacity, View } from 'react-native';
 import { ICBack, ICLike, ICShare } from '../../asset';
+import {colors} from '../../utils'
 
 function IconButton({ type, onPress }) {
   function Icon() {
@@ -24,14 +25,15 @@ export default IconButton;
 
 const styles = StyleSheet.create({
   iconWrapper: {
-    width: 50,
-    height: 50,
+    width: 35,
+    height: 35,
     borderRadius: 50 / 2,
-    backgroundColor: 'red',
+    backgroundColor: colors.button.secondary,
     opacity: 0.8,
+    justifyContent: 'center'
   },
   icon: {
-    padding: 16,
+    justifyContent: 'center',
     alignSelf: 'center',
     borderRadius: 8,
   },

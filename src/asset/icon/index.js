@@ -1,8 +1,6 @@
-import ICDownload from './download.png';
-import ICLike from './like.png';
-import ICShare from './share.png';
-import ICBack from './back.png';
+import ICDownload from './download.svg';
+import ICLike from './like.svg';
+import ICShare from './share.svg';
+import ICBack from './back.svg';
 
-export {
-  ICDownload, ICLike, ICBack, ICShare,
-};
+export {ICDownload, ICLike, ICBack, ICShare};
